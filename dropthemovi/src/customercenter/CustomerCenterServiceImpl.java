@@ -9,11 +9,11 @@ package customercenter;
 public class CustomerCenterServiceImpl implements CustomerCenterService{
 	CustomerCenterBean customer;
 	@Override
-	public void SetCustomerCenter(String name, String memberId, String phoneNo) {
+	public void setCustomerCenter(String name, String memberId, String phoneNo) {
 		customer = new CustomerCenterBean(name, memberId, phoneNo);
 	}
 	@Override
-	public void DeleteCustomerCenter() {
+	public void deleteCustomerCenter() {
 		customer = null;
 	}
 }

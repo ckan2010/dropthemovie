@@ -12,11 +12,11 @@ public class MovieRankServiceImpl implements MovieRankService{
     MovieRankBean movierank;
     Calendar date = Calendar.getInstance();
 	@Override
-	public void SetMovieRank(String name, String memberId, String birthDay, String movieName) {
+	public void setMovieRank(String name, String memberId, String birthDay, String movieName) {
 		movierank = new MovieRankBean(name, memberId, birthDay, movieName);
 	}
 	@Override
-	public void SetAgeSpecific(String birthDay) {
+	public void setAgeSpecific(String birthDay) {
 		int age = 0,agespecifi = 0;
 		age = ((date.get(Calendar.YEAR)) - Integer.parseInt(birthDay.substring(0, 4)))/10;
 		switch (age) {
@@ -37,7 +37,7 @@ public class MovieRankServiceImpl implements MovieRankService{
 	}
 
 	@Override
-	public void SetStrimingNo(int strimingno) {
+	public void setStrimingNo(int strimingno) {
 		movierank.setStreamingNo(strimingno);
 	}
 

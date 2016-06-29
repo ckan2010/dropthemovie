@@ -7,6 +7,6 @@ package customercenter;
  * @story  :
  */
 public interface CustomerCenterService {
-	public abstract void SetCustomerCenter(String name, String memberId, String phoneNo);
-	public void DeleteCustomerCenter();
+	public abstract void setCustomerCenter(String name, String memberId, String phoneNo);
+	public void deleteCustomerCenter();
 }

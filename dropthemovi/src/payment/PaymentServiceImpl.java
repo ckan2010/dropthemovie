@@ -12,12 +12,12 @@ public class PaymentServiceImpl implements PaymentService {
 		payment = new PaymentBean(name, memberId, cardCompany, cardNo, payDate, paymentPrice);
 	}
 	@Override
-	public void SetFromDate() {
+	public void setFromDate() {
 		String now = new SimpleDateFormat("yyyy-MM-01").format(new Date(System.currentTimeMillis()));
 		payment.setFromDate(now);
 	}
 	@Override
-	public void SetToDate() {
+	public void setToDate() {
 		String now = new SimpleDateFormat("yyyy-MM-01").format(new Date(System.currentTimeMillis()));
 		String currentMonth = new SimpleDateFormat("yyyy-MM").format(new Date(System.currentTimeMillis()));
 		String date[] = now.split("-");
