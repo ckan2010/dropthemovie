@@ -7,22 +7,30 @@ package customercenter;
  * @story  :
  */
 public class CustomerCenterBean {
-	private String name,memberId,phoneNo,category,question,answer;
-	
-	public CustomerCenterBean(String name, String memberId, String phoneNo) {
-		super();
-		this.name = name;
-		this.memberId = memberId;
-		this.phoneNo = phoneNo;
+	private String name,email,phoneNo,category,question,answer;
+	private static CustomerCenterBean instance = new CustomerCenterBean();
+	private CustomerCenterBean() {
+	}
+	public static CustomerCenterBean getInstance() {
+		return instance;
 	}
 	public String getName() {
 		return name;
 	}
-	public String getMemberId() {
-		return memberId;
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
 	}
 	public String getPhoneNo() {
 		return phoneNo;
+	}
+	public void setPhoneNo(String phoneNo) {
+		this.phoneNo = phoneNo;
 	}
 	public String getCategory() {
 		return category;
@@ -42,5 +50,4 @@ public class CustomerCenterBean {
 	public void setAnswer(String answer) {
 		this.answer = answer;
 	}
-	
 }

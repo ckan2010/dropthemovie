@@ -1,5 +1,7 @@
 package movierank;
 
+import java.util.List;
+
 /**
  * @date   :2016. 6. 22.
  * @author :ckan
@@ -7,7 +9,7 @@ package movierank;
  * @story  :
  */
 public interface MovieRankService {
-	public abstract void setMovieRank(String name, String memberId, String birthDay, String movieName);
-	public void setAgeSpecific(String birthDay);
-	public void setStrimingNo(int strimingno);
+	public List<MovieRankBean> list(MovieRankBean rank);
+	public List<MovieRankBean> setAgeSpecific(MovieRankBean rank);
+	public List<MovieRankBean> setStrimingNo(MovieRankBean rank);
 }
