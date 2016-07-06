@@ -7,13 +7,19 @@ package movierank;
  * @story  :
  */
 public class MovieRankBean {
-	private String name,email,birthDay,movieName;
+	private String name,email,birthDay,movieName,streamingTime;
 	private int streamingNo,ageSpecific;
 	private MovieRankBean() {
 	}
 	private static MovieRankBean instance = new MovieRankBean();
 	public static MovieRankBean getInstance() {
 		return instance;
+	}
+	public String getStreamingTime() {
+		return streamingTime;
+	}
+	public void setStreamingTime(String streamingTime) {
+		this.streamingTime = streamingTime;
 	}
 	public String getName() {
 		return name;

@@ -45,5 +45,8 @@ public class MovieRankServiceImpl implements MovieRankService{
 		movieRank.setStreamingNo(rank.getStreamingNo());
 		return null;
 	}
-
+	public List<MovieRankBean> setStrimingTime(MovieRankBean rank) {
+		movieRank.setStreamingTime(rank.getStreamingTime());
+		return null;
+	}
 }
